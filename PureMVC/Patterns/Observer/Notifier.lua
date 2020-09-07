@@ -13,14 +13,14 @@ function Notifier.__create()
     ---@param type string
     function Instance:SendNotification(notificationName, body, type)
         
-        local facade = Instance.GetFacade()
+        local facade = self:GetFacade()
         if facade then
             facade:SendNotification(notificationName, body, type)
         end
     end
 
     ---@return PureMVC.Facade
-    function Instance.GetFacade()
+    function Instance:GetFacade()
         
         return PureMVC.Facade.GetInstance(function()
             return PureMVC.Facade.new()

@@ -6,7 +6,7 @@ function SimpleCommand.__create()
     local Instance = {}
     
     function Instance:ctor()
-        Instance.super:ctor()
+        self.super:ctor()
     end
     
     ---@param notification PureMVC.Notification
